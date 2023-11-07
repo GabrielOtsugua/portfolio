@@ -1,5 +1,6 @@
+import LeftArrow from "@/components/LeftArrow";
 import RightArrow from "@/components/RightArrow";
-import Link from "next/link";
+import { IoOpenOutline } from "react-icons/io";
 
 const Projects = () => {
   const projects = [
@@ -18,49 +19,36 @@ const Projects = () => {
     {
       name: "Burger Kenzie",
       description:
-        "Seja bem-vindo à Burger Kenzie, onde oferecemos os melhores lanches e bebidas.",
+        "Burger Kenzie oferece os melhores lanches e bebidas para você saborear.",
       link: "https://react-entrega-hamburgueria-da-kenzie-gabrielotsugua.vercel.app/",
     },
   ];
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-title text-xl font-bold w-[260px]">
-          Alguns Projetos
-        </h1>
+    <div className="w-full lg:pt-16">
+      <h1 className="text-title text-xl md:text-3xl font-bold mb-4">
+        Alguns Projetos
+      </h1>
+
+      <div className="grid gap-4">
+        {projects.map((item, i) => (
+          <details className="collapse collapse-arrow border border-primary rounded">
+            <summary className="collapse-title text-primary">
+              {item.name}
+            </summary>
+            <div className="collapse-content">
+              <a
+                href={item.link}
+                className="link link-info hover:text-opacity-70"
+              >
+                {item.description}
+              </a>
+            </div>
+          </details>
+        ))}
       </div>
 
-      {projects.map((item, i) => (
-        <div key={i} className="border border-primary rounded p-6 mx-12 mb-3">
-          <a href={item.link}>
-            <div className="flex justify-between items-center mb-3">
-              <p className="text-title">{item.name}</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6 text-primary"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"
-                />
-              </svg>
-            </div>
-
-            <p className="text-sm">{item.description}</p>
-          </a>
-        </div>
-      ))}
-
-      <p className="text-xs pt-3 text-center">
-        Para visualizar os projetos, basta clicar sobre as respectivas opções.
-      </p>
-
+      <LeftArrow href="./Knowledge" />
       <RightArrow href="./GetInTouch" />
     </div>
   );

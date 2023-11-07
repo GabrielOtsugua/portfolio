@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-const RightArrow = (props) => {
+const LeftArrow = (props) => {
   return (
     <Link
       href={props.href}
-      className="lg:hidden text-primary absolute bottom-8 right-4 md:bottom-16 md:right-8"
+      className="lg:hidden text-primary absolute bottom-8 left-4 md:bottom-16 md:left-8"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -17,11 +17,11 @@ const RightArrow = (props) => {
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
-          d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+          d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
         />
       </svg>
     </Link>
   );
 };
 
-export default RightArrow;
+export default LeftArrow;
