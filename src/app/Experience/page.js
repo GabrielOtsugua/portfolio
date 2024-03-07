@@ -1,34 +1,32 @@
+import LeftArrow from "@/components/LeftArrow";
 import RightArrow from "@/components/RightArrow";
 import Link from "next/link";
 
 const Experience = () => {
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-title text-xl font-bold">
-          Experiência Profissional
-        </h1>
-      </div>
+    <div>
+      <h1 className="text-title text-xl md:text-3xl font-bold mb-4">
+        Experiência Profissional
+      </h1>
 
-      <h2 className="mb-2">
-        <span className="text-title">Desenvolvedor Front-End</span> -
-        <span className="text-primary"> Smarthive</span>
+      <h2>
+        <span className="text-title">Desenvolvedor Front-End Júnior</span> -
+        <span className="text-primary"> Smart Hive</span>
       </h2>
-      <p className="text-xs tracking-widest">02/2023 - 10/2023</p>
 
-      <p className="tracking-widest text-sm">
-        <span className="text-primary font-bold text-4xl">. </span>A empresa
-        tinha como principal desígnio a{" "}
-        <span className="text-title">simplificação da rotina</span> dos seus
-        utilizadores que residem{" "}
-        <span className="text-title">em condomínios</span>.
+      <p className="text-sm md:text-lg mb-4">02/2023 - 10/2023</p>
+
+      <p className="mb-4">
+        <span className="text-primary">. </span>A empresa tinha como principal
+        desígnio a{" "}
+        <span className="text-title">simplificação da rotina dos síndicos</span>
+        , responsáveis pela gestão do condomínio.
       </p>
 
-      <p className="tracking-widest text-sm">
-        <span className="text-primary font-bold text-4xl">. </span>
-        No âmbito das minhas responsabilidades,{" "}
+      <p>
+        <span className="text-primary">. </span>
         <span className="text-title">
-          encarei o desenvolvimento Front-End de dois projetos
+          Encarei o desenvolvimento Front-End de dois projetos
         </span>
         . Um deles tinha como objetivo a{" "}
         <span className="text-title">gestão de condomínios</span>, enquanto o
@@ -36,6 +34,7 @@ const Experience = () => {
         meio de um aplicativo.
       </p>
 
+      <LeftArrow href="./Training" />
       <RightArrow href="./Knowledge" />
     </div>
   );

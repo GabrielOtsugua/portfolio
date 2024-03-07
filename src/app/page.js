@@ -1,31 +1,28 @@
+"use client";
+
 import Link from "next/link";
 
 const Home = () => {
   return (
-    <div>
-      <p className="text-primary text-xl tracking-widest mb-3">
-        Oi, meu nome é
-      </p>
-      <h1 className="text-title text-4xl font-bold mb-3">Gabriel Augusto.</h1>
+    <div className="">
+      <p className="text-primary text-xl md:text-3xl mb-4">Oi, meu nome é</p>
 
-      <h2 className="text-3xl font-semibold mb-6">
-        Sou um criador de softwares.
+      <h1 className="text-title text-4xl md:text-6xl font-bold mb-4">
+        Gabriel Augusto.
+      </h1>
+
+      <h2 className="text-2xl md:text-4xl font-semibold mb-4">
+        Sou um desenvolvedor de softwares.
       </h2>
 
-      <p className="mb-9 leading-7">
-        Sou um
-        <span className="text-title">
-          {" "}
-          especialista em desenvolvimento de software Front-End
-        </span>
-        , com ênfase em experiências de usuário e designs de alta qualidade.
-        Estou avançando em minha carreira e estou seguro que minha
-        <span className="text-title"> experiência e habilidades</span> podem
-        impulsionar o sucesso da empresa.
+      <p className="mb-4">
+        Ênfase em experiências de usuário e designs de alta qualidade. Estou
+        seguro que minha experiência e habilidades podem impulsionar o sucesso
+        da empresa.
       </p>
 
       <Link href="./AboutMe">
-        <button className="border border-primary rounded px-6 py-3 text-primary">
+        <button className="lg:hidden border border-primary rounded font-medium p-2 md:p-4 md:text-xl text-primary">
           Saiba mais
         </button>
       </Link>
