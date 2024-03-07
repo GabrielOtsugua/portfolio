@@ -35,7 +35,9 @@ const Menu = () => {
   return (
     <ul className="lg:hidden absolute top-16 right-4 md:top-32 md:right-8 bg-darkbackground bg-opacity-50 rounded p-4 md:p-8 text-primary md:text-xl grid grid-cols-1 gap-3 md:gap-6">
       {routes.map((item, i) => (
-        <Link href={item.name}>{item.pt}</Link>
+        <Link key={i} href={item.name}>
+          {item.pt}
+        </Link>
       ))}
     </ul>
   );

@@ -1,14 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Fade, Slide } from "react-awesome-reveal";
 
 const Home = () => {
   return (
-    <div>
-      <Fade>
-        <p className="text-primary text-xl md:text-3xl mb-4">Oi, meu nome é</p>
-      </Fade>
+    <div className="">
+      <p className="text-primary text-xl md:text-3xl mb-4">Oi, meu nome é</p>
 
       <h1 className="text-title text-4xl md:text-6xl font-bold mb-4">
         Gabriel Augusto.
